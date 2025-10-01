@@ -65,7 +65,7 @@ body {
 }
 
 @keyframes fly-witch {
-  0% {
+  100% {
     left: -150px;
     transform: scaleX(1) rotate(-5deg);
   }
@@ -73,7 +73,7 @@ body {
     top: 25%;
     transform: scaleX(1.2) rotate(5deg);
   }
-  100% {
+  0% {
     left: 110%;
     transform: scaleX(1) rotate(-5deg);
   }
