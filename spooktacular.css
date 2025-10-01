@@ -115,6 +115,25 @@ img {
   /* outline: 2px solid black; */
   flex-basis: 60%;
   height: 100vh;
+  text-align: center;
+}
+
+.text {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  color: var(--blood-red);
+  text-shadow: 2px 2px 10px #000;
+  animation: drip 2s infinite alternate;
+  z-index: 3;
+}
+
+@keyframes drip {
+  0% {
+    text-shadow: 0 0 5px crimson;
+  }
+  100% {
+    text-shadow: 0 10px 15px darkred;
+  }
 }
 
 .bat-img-1 {
