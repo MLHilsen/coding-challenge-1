@@ -41,16 +41,32 @@ img {
   position: absolute;
   top: 5px;
   width: 35%;
-  transition: transform 1.3s ease-in-out;
-  transform: translateX(180%);
+  animation: fly-witch 8s linear infinite;
   z-index: 1;
 
   outline: 2px orange solid;
 }
-
-.witch-img:hover {
-  transform: translateX(0%);
-  z-index: 1;
+@keyframes fly-witch {
+  0% {
+    left: -90px;
+    transform: scaleX(1) rotate(-5deg);
+  }
+  25% {
+    top: 25%;
+    transform: scaleX(1.2) rotate(5deg);
+  }
+  50% {
+    left: 110%;
+    transform: scaleX(1) rotate(-5deg);
+  }
+  75% {
+    top: 25%;
+    transform: scaleX(1.2) rotate(5deg);
+  }
+  100% {
+    left: -90px;
+    transform: scaleX(1) rotate(-5deg);
+  }
 }
 
 .moon-img {
@@ -58,7 +74,7 @@ img {
   right: 10px;
   top: 10px;
   width: 35%;
-  z-index: 2;
+  z-index: 20;
 }
 
 /* Left side of the page */
