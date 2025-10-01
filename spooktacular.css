@@ -4,6 +4,9 @@
   --monster-green: #228B22;
   --black: #000000;
   --ghost-white: #FFFFFF;
+
+  background-image: url("./background.webp");
+  background-size: cover;
 }
 
 .container {
@@ -17,7 +20,7 @@
 /* Right side of the page */
 
 .right {
-  outline: 2px solid black;
+  /* outline: 2px solid black; */
   flex-basis: 40%;
   height: 100vh;
   position: relative;
@@ -29,8 +32,37 @@ img {
 
 .house-img {
   bottom: 5px;
+  width: 140%;
+  transform: translateX(-115px);
 
-  outline: 2px orange solid;
+  /* outline: 2px orange solid; */
+}
+
+.pumpkin-img-1 {
+  position: absolute;
+  width: 15%;
+  bottom: 5px;
+}
+
+.pumpkin-img-2 {
+  position: absolute;
+  width: 15%;
+  right: 40px;
+  bottom: 9px;
+}
+
+.pumpkin-img-3 {
+  position: absolute;
+  width: 15%;
+  right: 180px;
+  bottom: 15px;
+}
+
+.pumpkin-img-4 {
+  position: absolute;
+  width: 15%;
+  left: 175px;
+  bottom: 2px;
 }
 
 .flip {
@@ -44,7 +76,7 @@ img {
   animation: fly-witch 8s linear infinite;
   z-index: 1;
 
-  outline: 2px orange solid;
+  /* outline: 2px orange solid; */
 }
 @keyframes fly-witch {
   0% {
@@ -80,7 +112,7 @@ img {
 /* Left side of the page */
 
 .left {
-  outline: 2px solid black;
+  /* outline: 2px solid black; */
   flex-basis: 60%;
   height: 100vh;
 }
@@ -112,17 +144,17 @@ img {
 .bat-img-2 {
   position: absolute;
   width: 10%;
-  animation: fly-bat-2 2s linear infinite;
+  animation: fly-bat-2 3s linear infinite;
   animation-direction: alternate;
 }
 @keyframes fly-bat-2 {
   0% {
-    left: 30%;
+    left: 50%;
     transform: scaleX(1) rotate(-25deg);
     transform: translateY(0px);
   }
   50% {
-    left: 15%;
+    left: 25%;
     transform: scaleX(1) rotate(25deg);
     transform: translateY(70px);
   }
@@ -130,5 +162,24 @@ img {
     left: 0px;
     transform: scaleX(1) rotate(-25deg);
     transform: translateY(0);
+  }
+}
+
+.man-img {
+  position: absolute;
+  width: 15%;
+  bottom: 5px;
+  animation: man-walk 4s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes man-walk {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 25%;
+  }
+  100% {
+    left: 50%;
   }
 }
