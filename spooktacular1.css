@@ -1,0 +1,168 @@
+/* Import Creepster font */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Variables */
+:root {
+  --pumpkin: #FF7518;
+  --witch-purple: #4B0082;
+  --monster-green: #228B22;
+  --black: #000000;
+  --ghost-white: #ffffff;
+  --blood-red: #8B0000;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #1a001a);
+  height: 100vh;
+  color: var(--ghost-white);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Scene Container */
+.scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Moon */
+.moon {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at center, #f0f0f0 50%, #ccc 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 60px 20px rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+
+/* Flying Witch Image */
+.witch {
+  position: absolute;
+  top: 30%;
+  width: 100px;
+  animation: fly-witch 8s linear infinite;
+  z-index: 2;
+  filter: drop-shadow(2px 2px 4px black);
+}
+
+@keyframes fly-witch {
+  0% {
+    left: -150px;
+    transform: scaleX(1) rotate(-5deg);
+  }
+  50% {
+    top: 25%;
+    transform: scaleX(1.2) rotate(5deg);
+  }
+  100% {
+    left: 110%;
+    transform: scaleX(1) rotate(-5deg);
+  }
+}
+
+/* Bloody Headline */
+.bloody-headline {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  color: var(--blood-red);
+  text-shadow: 2px 2px 10px #000;
+  animation: drip 2s infinite alternate;
+  z-index: 3;
+}
+
+@keyframes drip {
+  0% {
+    text-shadow: 0 0 5px crimson;
+  }
+  100% {
+    text-shadow: 0 10px 15px darkred;
+  }
+}
+
+/* Fog Overlay */
+.fog-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 20%, transparent 70%);
+  animation: fogMove 60s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes fogMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Bloody Button */
+.bloody-button {
+  font-family: 'Creepster', cursive;
+  font-size: 1.5rem;
+  color: white;
+  background-color: darkred;
+  padding: 15px 30px;
+  text-decoration: none;
+  border: 3px solid crimson;
+  border-radius: 10px;
+  box-shadow: 0 0 20px crimson;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.bloody-button:hover,
+.bloody-button:focus {
+  background-color: crimson;
+  box-shadow: 0 0 40px red;
+  color: black;
+}
+
+/* Responsive Text */
+@media (max-width: 600px) {
+  .bloody-headline {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+
+  .bloody-button {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
+
+  .moon {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .witch {
+    width: 70px;
+  }
+}
