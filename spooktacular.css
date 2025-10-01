@@ -14,14 +14,57 @@
   width: 100%;
 }
 
-.house {
+/* Right side of the page */
+
+.right {
   outline: 2px solid black;
-  flex-basis: 35%;
+  flex-basis: 40%;
   height: 100vh;
+  position: relative;
 }
 
-.person {
+img {
+  position: absolute;
+}
+
+.house-img {
+  bottom: 5px;
+
+  outline: 2px orange solid;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+.witch-img {
+  position: absolute;
+  top: 5px;
+  width: 35%;
+  transition: transform 1.3s ease-in-out;
+  transform: translateX(180%);
+  z-index: 1;
+
+  outline: 2px orange solid;
+}
+
+.witch-img:hover {
+  transform: translateX(0%);
+  z-index: 1;
+}
+
+.moon-img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35%;
+  z-index: 2;
+}
+
+/* Left side of the page */
+
+.left {
   outline: 2px solid black;
-  flex-basis: 65%;
+  flex-basis: 60%;
   height: 100vh;
 }
