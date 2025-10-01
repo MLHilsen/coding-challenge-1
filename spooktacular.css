@@ -84,3 +84,51 @@ img {
   flex-basis: 60%;
   height: 100vh;
 }
+
+.bat-img-1 {
+  position: absolute;
+  width: 10%;
+  animation: fly-bat-1 2s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes fly-bat-1 {
+  0% {
+    left: 0px;
+    transform: scaleX(1) rotate(-15deg);
+    transform: translateY(30px);
+  }
+  50% {
+    left: 15%;
+    transform: scaleX(1) rotate(15deg);
+    transform: translateY(0px);
+  }
+  100% {
+    left: 30%;
+    transform: scaleX(1) rotate(-15deg);
+    transform: translateY(30px);
+  }
+}
+
+.bat-img-2 {
+  position: absolute;
+  width: 10%;
+  animation: fly-bat-2 2s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes fly-bat-2 {
+  0% {
+    left: 30%;
+    transform: scaleX(1) rotate(-25deg);
+    transform: translateY(0px);
+  }
+  50% {
+    left: 15%;
+    transform: scaleX(1) rotate(25deg);
+    transform: translateY(70px);
+  }
+  100% {
+    left: 0px;
+    transform: scaleX(1) rotate(-25deg);
+    transform: translateY(0);
+  }
+}
